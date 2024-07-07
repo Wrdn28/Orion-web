@@ -1,4 +1,9 @@
+"use client"
+
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 // icons
 import { IoLogoAndroid } from "react-icons/io5";
@@ -9,6 +14,11 @@ import { MdSecurityUpdateGood } from "react-icons/md";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init()
+  }, []);
+
   return (
     <>
       <main>
@@ -40,12 +50,62 @@ const Home = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="lg:w-1/2 text-center mt-5 md:mt-10">
+                <div className="lg:w-1/2 text-center mt-5 md:mt-10 mb-10">
                   <img src="/orion-fw.jpg" alt="orionPage" className="mx-auto animate__animated animate__fadeInRight animate__delay-1s" />
                 </div>
               </div>
             </div>
           </header>
+          <div className="features w-full min-h-screen py-12">
+            <div className="container mx-auto">
+              <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold">
+                  Why choose OrionOS?
+                </h1>
+                <p className="mt-4">
+                  Bellow is our feature
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div className="feature-item">
+                  <IoRocket size={45} className="mb-3 mx-auto icon" />
+                  <h2 className="text-2xl font-semibold">
+                    Smooth AF
+                  </h2>
+                  <p className="mt-4">
+                    Unleash the beast in your phone with the top-notch performance that you get out of the box.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <IoIosLock size={45} className="mb-3 mx-auto icon" />
+                  <h2 className="text-2xl font-semibold">
+                    Secure
+                  </h2>
+                  <p className="mt-4">
+                    We have enhanced <strong>app locks</strong> and <strong>face unlocks</strong> which make our ROM secure.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <ImPaintFormat size={45} className="mb-3 mx-auto icon" />
+                  <h2 className="text-2xl font-semibold">
+                    Customizable
+                  </h2>
+                  <p className="mt-4">
+                    Most parts of the ROM are customizable. The feature is for everyone.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <MdSecurityUpdateGood size={45} className="mb-3 mx-auto icon" />
+                  <h2 className="text-2xl font-semibold">
+                    OTA Update
+                  </h2>
+                  <p className="mt-4">
+                    We provide timely stable OTA updates which make this ROM just like your stock ROM.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </>
