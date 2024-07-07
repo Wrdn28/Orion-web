@@ -3,31 +3,85 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #f6f8fd;
+  --secondary-color: #dc3545;
+  --color-text: #231942;
+  --navbar-color: #ffffff;
+  --navbar-color-text: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* navbar */
+.navbar {
+  position: fixed;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 999;
+  animation-name: fadeInDown;
+  animation-duration: 1s;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.navbar.color-active {
+  background-color: var(--navbar-color);
+  padding: 15px 0 15px 0;
+  border-bottom: 2px solid #dc35464e;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.navbar ul li {
+  font-size: 15px;
+  font-weight: 400;
+  transition: transform 200ms ease-in-out;
+  color: var(--navbar-color-text);
+}
+
+.navbar ul li:hover {
+  transform: translateY(-3px);
+  color: var(--secondary-color);
+}
+/* homepage */
+header {
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f7797d, #c6ffdd); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f7797d, #c6ffdd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home img {
+  width: 240px;
+  margin-top: 2rem;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.home img:hover {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.35);
+  transform: translateY(-6px);
+}
+
+.home .grab {
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #10B981;
+  color: var(--primary-color);
+  transition: box-shadow 200ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.home .grab:hover {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
+}
+
+.home .new {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.home .new:hover {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
 }
