@@ -41,7 +41,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="lg:w-1/2 text-center mt-5 md:mt-10">
-                  <img src="/orion-fw.jpg" alt="orionPage" className="mx-auto animate__animated animate__fadeInRight" />
+                  <img src="/orion-fw.jpg" alt="orionPage" className="mx-auto animate__animated animate__fadeInRight animate__delay-1s" />
                 </div>
               </div>
             </div>

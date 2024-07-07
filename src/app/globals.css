@@ -52,6 +52,7 @@ header {
   border-radius: 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  --animate-delay: 0.5s;
 }
 
 .home img:hover {
