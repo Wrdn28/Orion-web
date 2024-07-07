@@ -56,10 +56,10 @@ const Home = () => {
               </div>
             </div>
           </header>
-          <div className="features w-full min-h-screen py-12">
+          <div className="features w-full min-h-screen py-12 px-5">
             <div className="container mx-auto">
               <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold">
+                <h1 className="text-3xl lg:text-4xl font-bold mt-20">
                   Why choose OrionOS?
                 </h1>
                 <p className="mt-4">
