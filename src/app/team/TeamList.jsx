@@ -18,7 +18,7 @@ const TeamList = async () => {
     <div className="container mx-auto">
       <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-10">
         { data.map((dev, index) => (
-          <div key={index} className="dev-container border border-neutral-300 p-4 bg-neutral-50 rounded-lg animate__animated animate__zoomIn">
+          <div key={index} className="dev-container border border-neutral-300 p-4 bg-neutral-50 rounded-lg animate__animated animate__fadeInUp">
             <div className="items-center flex flex-col justify-center">
               <Image
               src={dev.image}

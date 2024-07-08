@@ -37,7 +37,7 @@ const Home = () => {
                   </p>
                   <div className="flex gap-3 justify-center lg:justify-normal">
                     <Link className="grab flex items-center px-3 py-2 animate__animated animate__fadeInUp animate__delay-1s"
-                    href="/devices"
+                    href="/download"
                     >
                       <IoLogoAndroid size={20} className="mr-2"/>
                       Grab your orion
