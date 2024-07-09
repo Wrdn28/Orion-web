@@ -166,7 +166,52 @@ header {
 /* changelog */
 .changelog {
   background-color: var(--primary-color);
+  --animate-delay: 0.5s;
 }
+
+/* download page */
+.device-list .head {
+  --animate-delay: 0.5s;
+}
+
+.device-list .brand {
+  --animate-delay: 0.7s;
+}
+
+.device-list .divider {
+  --animate-delay: 3s;
+}
+
+/* download page info */
+.download-page .device {
+  --animate-delay: 0.3s;
+}
+
+.download-page .grid {
+  --animate-delay: 0.3s;
+}
+
+.download-page .ch {
+  --animate-delay: 0.5s;
+}
+
+.download-page  h1 {
+  font-weight: bold;
+  color: var(--navbar-color-text);
+  animation: fadeInUp;
+  animation-duration: 2s;
+  --animate-delay: 0.6s;
+}
+.download-page  ul {
+  font-family: monospace;
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  --animate-delay: 0.7s;
+}
+
 /* loading */
 .loader {
   width: 48px;

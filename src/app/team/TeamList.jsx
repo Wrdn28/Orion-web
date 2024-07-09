@@ -42,7 +42,7 @@ const TeamList = async () => {
                 <Link href={dev.social.github} target="_blank" className="hover:text-green-500 duration-300 transition-all hover:-translate-y-2 text-gray-500">
                   <FaGithub size={30} />
                 </Link>
-                <span className="font-bold">|</span>
+                <span className="text-2xl text-gray-500 font-thin">|</span>
                 <Link href={dev.social.telegram} target="_blank" className="hover:text-blue-500 duration-300 transition-all hover:-translate-y-2 text-gray-500">
                   <FaTelegram size={30}/>
                 </Link>

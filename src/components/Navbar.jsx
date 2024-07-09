@@ -35,7 +35,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between md:block">
               {/* LOGO */}
               <Link href="/" className="justify-center items-center flex">
-                <Image src="/OrionOS.svg" width={40} height={40} />
+                <Image src="/OrionOS.svg" width={40} height={40} alt="orion.svg" />
                 <h2 className="text-2xl font-bold ">OrionOS</h2>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
