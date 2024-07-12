@@ -21,7 +21,7 @@ const DeviceList = async ({ brand }) => {
                       {data.official_status}
                     </p>
                     <h3 className="mt-4 font-semibold text-base">
-                      Device: {data.device_name}
+                      {data.device_name}
                     </h3>
                     <p className="text-base">
                       Maintainer: {data.maintainer_name}

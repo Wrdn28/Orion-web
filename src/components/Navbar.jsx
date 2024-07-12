@@ -79,8 +79,8 @@ const Navbar = () => {
                   <Link href="/download" onClick={() => setNavbar(!navbar)}
                   className="btn flex items-center gap-2 bg-emerald-500 text-white px-3 py-2.5 rounded-lg justify-center"
                   >
-                    Download
                     <FaDownload />
+                    Download
                   </Link>
                 </li>
               </ul>
