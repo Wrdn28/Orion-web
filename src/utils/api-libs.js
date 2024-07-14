@@ -1,9 +1,5 @@
 export async function getAllDevices() {
-  const response = await fetch("https://orion-apiv1.vercel.app/device", {
-    next: {
-      revalidate: 300
-    }
-  });
+  const response = await fetch("https://orion-apiv1.vercel.app/device");
 
   if (!response.ok) {
     throw new Error("Failed to fetch devices");
@@ -13,11 +9,7 @@ export async function getAllDevices() {
 }
 
 export async function getDeviceByBrand(brand) {
-  const response = await fetch(`https://orion-apiv1.vercel.app/device/brand/${brand}`, {
-    next: {
-      revalidate: 300
-    }
-  });
+  const response = await fetch(`https://orion-apiv1.vercel.app/device/brand/${brand}`);
 
   if (!response.ok) {
     throw new Error("Failed to fetch devices by brand");

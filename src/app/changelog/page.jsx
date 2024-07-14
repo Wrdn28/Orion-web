@@ -1,9 +1,5 @@
 const getChangelog = async () => {
-  const response = await fetch("https://orion-apiv1.vercel.app/changelog", {
-    next: {
-      revalidate: 300 // caching for 5 minutes (60*5)
-    }
-  });
+  const response = await fetch("https://orion-apiv1.vercel.app/changelog");
   return response.json();
 };
 
@@ -19,7 +15,7 @@ const Changelog = async () => {
           { changelog.map((changelog, index) => (
             <div key={index} className="mb-4 border border-neutral-300 p-4 bg-neutral-50 rounded-lg animate__animated animate__fadeInUp animate__delay-1s">
               <h2 className="text-md lg:text-xl font-semibold">{changelog.date}</h2>
-              <ul className="list-disc list-inside ml-4 text-normal">
+              <ul className="list-disc list-inside ml-4 text-sm">
                 { changelog.changes.map((change, indx) => (
                   <li key={indx}>{change}</li>
                 ))}

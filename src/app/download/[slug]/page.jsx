@@ -18,11 +18,7 @@ export async function generateStaticParams() {
 };
 
 const getDeviceBySlug = async (slug) => {
-  const response = await fetch(`https://orion-apiv1.vercel.app/device/${slug}`, {
-    next: {
-      revalidate: 300
-    }
-  });
+  const response = await fetch(`https://orion-apiv1.vercel.app/device/${slug}`);
   if (!response.ok) {
     notFound();
   };
