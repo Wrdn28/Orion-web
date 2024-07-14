@@ -3,11 +3,7 @@ import Link from 'next/link';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
 
 const getDev = async () => {
-  const response = await fetch("https://orion-apiv1.vercel.app/developer", {
-    next: {
-      revalidate: 300 // caching for 5 minutes (60*5)
-    }
-  });
+  const response = await fetch("https://orion-apiv1.vercel.app/developer");
   return response.json();
 };
 
