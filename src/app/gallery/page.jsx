@@ -1,7 +1,11 @@
 import Image from "next/image";
 
 const getScreenshot = async () => {
-  const response = await fetch("https://orion-apiv1.vercel.app/gallery");
+  const response = await fetch("https://orion-apiv1.vercel.app/gallery", {
+    next: {
+      revalidate: 300
+    }
+  });
 
   return response.json();
 };
