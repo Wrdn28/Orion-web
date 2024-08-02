@@ -27,13 +27,12 @@ const Home = () => {
             <div className="container mx-auto px-4">
               <div className="flex flex-col mt-32 sm:mt-1 md:mt-5 lg:mt-0 lg:flex-row items-center">
                 <div className="lg:w-1/2">
-                  <h1 className="mb-4 text-3xl lg:text-4xl font-bold animate__animated animate__fadeInUp animate__delay-1s ">
+                  <h1 className="mb-4 text-3xl sm:mt-20 lg:text-4xl font-bold animate__animated animate__fadeInUp animate__delay-1s ">
                     OrionOS Project
                   </h1>
                   <p className="mb-4 text-sm md:text-base animate__animated animate__fadeInUp animate__delay-1s">
-                    OrionOS is expertly built on LineageOS and crDroid based, with better customization,
-                    and user-friendly interface. Experience an operating system specifically designed
-                    to meet all your needs easily with fresh UI.
+                    OrionOS is a Android Custom ROM based on LineageOS & crDroidAndroid, Offering a stable experience
+                    with extensive customization features and performance enhancements.
                   </p>
                   <div className="flex gap-3 justify-center lg:justify-normal">
                     <Link className="grab flex items-center px-3 py-2 animate__animated animate__fadeInUp animate__delay-1s"
@@ -51,7 +50,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="lg:w-1/2 text-center mt-5 md:mt-10 mb-10">
-                  <img src="/orion-fw.jpg" alt="orionPage" className="mx-auto animate__animated animate__fadeInRight animate__delay-1s" />
+                  <img src="/about.jpg" alt="orionPage" className="mx-auto animate__animated animate__fadeInRight animate__delay-1s" />
                 </div>
               </div>
             </div>

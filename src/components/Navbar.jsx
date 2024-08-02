@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 // icons
 import { FaDownload } from "react-icons/fa";
-import { BsMenuButtonWide } from "react-icons/bs";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
@@ -36,18 +36,17 @@ const Navbar = () => {
               {/* LOGO */}
               <Link href="/" className="justify-center items-center flex">
                 <Image src="/OrionOS.svg" width={40} height={40} alt="orion.svg" />
-                <h2 className="text-2xl font-bold ">OrionOS</h2>
+                <h2 className="hidden md:block text-2xl font-bold ">OrionOS</h2>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
                 <button
                   className=""
-                  onClick={() => setNavbar(!navbar)}
-                >
+                  onClick={() => setNavbar(!navbar)}>
                   {navbar ? (
                     <IoMdClose size={25} />
                   ) : (
-                    <BsMenuButtonWide size={25} />
+                    <RxHamburgerMenu size={25} />
                   )}
                 </button>
               </div>

@@ -1,6 +1,8 @@
 import { getDeviceByBrand } from "@/utils/api-libs";
 import Link from 'next/link';
+import { Suspense } from "react";
 import { FaDownload } from "react-icons/fa";
+import Loading from "../loading";
 
 const DeviceList = async ({ brand }) => {
   const getDeviceBrand = await getDeviceByBrand(brand);
@@ -14,7 +16,9 @@ const DeviceList = async ({ brand }) => {
               <div key={index} className="border rounded-lg p-8 md:p-4 border-neutral-300 shadow-md bg-white animate__animated animate__fadeInUp">
                 <div className="flex flex-col md:flex-row items-center justify-center">
                   <div className="w-52 h-52 flex items-center justify-center overflow-hidden">
+                    <Suspense fallback={<Loading/>}>
                     <img src={data.device_image} className="object-contain w-full h-full" alt={data.device_name} />
+                    </Suspense>
                   </div>
                   <div className="mt-4 px-4 flex flex-col justify-center items-center md:items-start w-full">
                     <p className="bg-green-200 text-green-700 px-2 rounded-md text-sm">
