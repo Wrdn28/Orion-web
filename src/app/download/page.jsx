@@ -20,6 +20,18 @@ const Download = async () => {
         {/* device per brand */}
         <div className="p-4">
           <h1 className="brand pt-8 pl-4 flex gap-2 items-center font-mono font-semibold text-xl animate__animated animate__fadeInLeft animate__delay-1s">
+            <img src="https://i.ibb.co.com/3rxQVcx/nothing-icon.png"
+            className="w-9 h-9 rounded-md"
+            />
+            Nothing Phone
+          </h1>
+          <hr className="divider my-2 bg-gray-300 h-0.5 animate__animated animate__backInUp aminate__delay-1s" />
+          <Suspense fallback={<Loading/>}>
+            <DeviceList brand="nothing-phone" />
+          </Suspense>
+        </div>
+        <div className="p-4">
+          <h1 className="brand pt-8 pl-4 flex gap-2 items-center font-mono font-semibold text-xl animate__animated animate__fadeInLeft animate__delay-1s">
             <SiXiaomi size={30} className="text-orange-500"/>
             Xiaomi
           </h1>

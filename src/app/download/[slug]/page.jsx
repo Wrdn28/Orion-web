@@ -85,14 +85,14 @@ const Page = async ({params}) => {
             </Link>
           </div>
         </div>
-        <h2 className="ch text-2xl font-bold border-b border-neutral-300 mt-4 md:mt-8 pb-2 p-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <h2 className="ch text-xl font-bold border-b border-neutral-300 mt-4 md:mt-8 pb-2 p-4 animate__animated animate__fadeInUp animate__delay-1s">
           Changelogs
         </h2>
-        <article className="prose prose-headings:text-lg prose-headings:text-neutral-800 mt-2 md:mt-4 text-neutral-600 p-4">
+        <article className="prose prose-headings:text-sm prose-headings:text-neutral-800 mt-2 md:mt-4 text-neutral-600 p-4">
         { changelog === "error" ?
         <div className="ch flex items-center gap-2 text-red-600">
           <MdErrorOutline size={25} />
-          <p className="ch font-semibold">Error fetching changelogs</p>
+          <p className="ch">Error fetching changelogs</p>
         </div> :
         <div dangerouslySetInnerHTML={{ __html: changelog }} />}
       </article>
