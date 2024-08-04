@@ -92,7 +92,7 @@ const Page = async ({params}) => {
         { changelog === "error" ?
         <div className="ch flex items-center gap-2 text-red-600">
           <MdErrorOutline size={25} />
-          <p className="ch">Error fetching changelogs</p>
+          <p className="ch animate__animated animate__fadeInLeft animate__delay-1s">Error fetching changelogs</p>
         </div> :
         <div dangerouslySetInnerHTML={{ __html: changelog }} />}
       </article>
