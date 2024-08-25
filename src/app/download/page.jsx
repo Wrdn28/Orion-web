@@ -6,7 +6,6 @@ import { SiXiaomi } from "react-icons/si";
 
 const Download = async () => {
   const allDevice = await getAllDevices();
-  const getXiaomi = await getDeviceByBrand("xiaomi");
 
   return (
     <div className="device-list w-full py-24 bg-[#f6f8fd]">
@@ -21,6 +20,7 @@ const Download = async () => {
         <div className="p-4">
           <h1 className="brand pt-8 pl-4 flex gap-2 items-center font-mono font-semibold text-xl animate__animated animate__fadeInLeft animate__delay-1s">
             <img src="https://i.ibb.co.com/3rxQVcx/nothing-icon.png"
+            alt='nothing-icon'
             className="w-9 h-9 rounded-md"
             />
             Nothing Phone
