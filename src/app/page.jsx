@@ -5,6 +5,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
+export const runtime = "edge";
+
 // icons
 import { IoLogoAndroid } from "react-icons/io5";
 import { IoRocket } from "react-icons/io5";
